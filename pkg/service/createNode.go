@@ -5,7 +5,7 @@ import (
 )
 
 // Função para criar um novo nó
-func createNode(user *model.User) *model.AdjacencyNode {
+func CreateNode(user *model.User) *model.AdjacencyNode {
 	newNode := &model.AdjacencyNode{
 		User: user,
 		Next: nil,
