@@ -16,3 +16,9 @@ type Graph struct {
 	numUsers     int
 	visitedUsers *int
 }
+
+type Queue struct {
+	items     int
+	firstItem int
+	lastItem  int
+}
