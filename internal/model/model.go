@@ -1,24 +1,24 @@
 package model
 
 type User struct {
-	id       int
-	username string
+	ID       int
+	Username string
 }
 
 type AdjacencyNode struct {
-	user *User
-	next *AdjacencyNode
+	User *User
+	Next *AdjacencyNode
 }
 
 type Graph struct {
-	users        **User
-	adjList      **AdjacencyNode
-	numUsers     int
-	visitedUsers *int
+	Users        []*User
+	AdjList      []*AdjacencyNode
+	NumUsers     int
+	VisitedUsers map[int]bool
 }
 
 type Queue struct {
-	items     int
-	firstItem int
-	lastItem  int
+	Items     []int
+	FirstItem int
+	LastItem  int
 }
