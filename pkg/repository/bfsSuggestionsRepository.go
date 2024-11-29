@@ -6,18 +6,18 @@ import (
 	"social-network-algorithm/config/database"
 )
 
-type UserRepository struct {
+type BFSSuggestionsRepository struct {
 	db *sql.DB
 }
 
-func NewUserRepository() *UserRepository {
-	return &UserRepository{
+func NewBFSSuggestionsRepository() *BFSSuggestionsRepository {
+	return &BFSSuggestionsRepository{
 		db: database.GetDB(),
 	}
 }
 
 // GetConnections busca conexões diretas de um usuário no banco de dados.
-func (ur *UserRepository) GetConnections(userID int) ([]int, error) {
+func (ur *BFSSuggestionsRepository) GetConnections(userID int) ([]int, error) {
 	rows, err := ur.db.Query("SELECT followTo FROM user_follow WHERE followBy = ?", userID)
 	if err != nil {
 		log.Println("Erro ao buscar conexões diretas:", err)

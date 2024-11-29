@@ -7,18 +7,18 @@ import (
 	"sort"
 )
 
-type UserServiceProfile struct {
-	userRepo *repository.UserRepository
+type SuggestionService struct {
+	userRepo *repository.BFSSuggestionsRepository
 }
 
-func NewUserServiceProfile() *UserServiceProfile {
-	return &UserServiceProfile{
-		userRepo: repository.NewUserRepository(),
+func NewSuggestionService() *SuggestionService {
+	return &SuggestionService{
+		userRepo: repository.NewBFSSuggestionsRepository(),
 	}
 }
 
 // GetSuggestedConnections realiza a BFS e retorna sugestões de conexão.
-func (us *UserServiceProfile) GetSuggestedConnections(userID int) ([]model.UserSuggestion, error) {
+func (us *SuggestionService) GetSuggestedConnections(userID int) ([]model.UserSuggestion, error) {
 	queue := []int{userID}
 	visited := make(map[int]bool)
 	distance := make(map[int]int)

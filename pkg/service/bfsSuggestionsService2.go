@@ -68,7 +68,8 @@ func BFS(graph *model.Graph, startUserID int) []model.UserSuggestion {
 	return suggestions
 }
 
-// GetSuggestedConnections usa o grafo para sugerir conexões.
+// Vesrão 2.0 de GetSuggestedConnections
+// Essa versão utiliza o grafo para sugerir conexões.
 func GetSuggestedConnections2(graph *model.Graph, userID int) ([]model.UserSuggestion, error) {
 	// Verifica se o usuário existe no grafo.
 	if _, exists := graph.VisitedUsers[userID]; !exists {
