@@ -22,3 +22,9 @@ type Queue struct {
 	FirstItem int
 	LastItem  int
 }
+
+type UserSuggestion struct {
+	UserID            int
+	CommonConnections int
+	ShortestPath      int
+}
