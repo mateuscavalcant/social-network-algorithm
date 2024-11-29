@@ -1,10 +1,10 @@
 # social-network-algorithm
-Sistema de sugestão de conexões em uma rede social utilizando algoritmos de busca em largura (BFS) diretamente integrado a um banco de dados.
+Sistema de sugestão de conexões que utiliza algoritmos de busca em largura (BFS) diretamente integrado a um banco de dados.
 
 ## Estrutura Do Projeto
 O projeto está estruturado em três camadas principais:
 
-- Handler: Responsável por receber requisições HTTP, processá-las e enviar respostas.
+- Controller: Responsável por receber requisições HTTP, processá-las e enviar respostas.
 
 - Service: Implementa a lógica de negócio, incluindo o algoritmo BFS e ordenação das sugestões.
 
@@ -12,7 +12,7 @@ O projeto está estruturado em três camadas principais:
 
 ## Banco de Dados
 
-O modelo utiliza um banco de dados SQL para armazenar:
+O modelo utiliza um banco de dados SQL para buscar informações a partir do ID do usuário logado:
 
 - Usuários (tabela users)
 
